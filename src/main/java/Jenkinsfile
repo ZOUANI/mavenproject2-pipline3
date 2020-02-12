@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+    stages {
+        stage('colne') {
+            steps {
+                sh 'cd /home/ana'
+                sh 'rm -r mavenproject2'
+
+                sh 'mkdir mavenproject2'
+                sh 'chmod -R 777 mavenproject2'
+
+                sh 'git clone https://github.com/ZOUANI/mavenproject2-pipline2.git /home/ana/mavenproject2'
+            }
+        }
+        stage('build') {
+                    steps {
+                        sh 'cd /home/ana/mavenproject2'
+                        sh 'mvn package'
+                    }
+                }
+
+        stage('run') {
+                    steps {
+                      sh 'cd /home/ana/mavenproject2/target'
+                      sh 'java -jar mavenproject2*.jar'
+                    }
+                }
+            }
+    
+}
