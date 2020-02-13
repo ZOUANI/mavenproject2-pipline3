@@ -4,24 +4,24 @@ pipeline {
         stage('colne') {
             steps {
                 sh 'cd /home/ana/'
-                sh 'rm -rf mavenproject2'
+                sh 'rm -rf myproject-1'
 
-                sh 'mkdir -p mavenproject2'
-                sh 'chmod -R 777 mavenproject2'
+                sh 'mkdir -p myproject-1'
+                sh 'chmod -R 777 myproject-1'
 
-                sh 'git clone https://github.com/ZOUANI/mavenproject2-pipline3.git /home/ana/mavenproject2'
+                sh 'git clone https://github.com/ZOUANI/myproject-1-pipline3.git /home/ana/myproject-1'
             }
         }
         stage('build') {
                     steps {
-                        sh 'cd /home/ana/mavenproject2'
+                        sh 'cd /home/ana/myproject-1/mavenproject2'
                         sh 'mvn package'
                     }
                 }
 
         stage('run') {
                     steps {
-                      sh 'cd /home/ana/mavenproject2/target'
+                      sh 'cd /home/ana/myproject-1/mavenproject2/target'
                       sh 'java -jar mavenproject2*.jar'
                     }
                 }
