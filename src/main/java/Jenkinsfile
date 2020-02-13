@@ -9,7 +9,7 @@ pipeline {
                 sh 'mkdir mavenproject2'
                 sh 'chmod -R 777 mavenproject2'
 
-                sh 'git clone https://github.com/ZOUANI/mavenproject2-pipline2.git /home/ana/mavenproject2'
+                sh 'git clone https://github.com/ZOUANI/mavenproject2-pipline3.git /home/ana/mavenproject2'
             }
         }
         stage('build') {
