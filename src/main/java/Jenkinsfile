@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('colne') {
             steps {
-                sh 'cd /home/ana'
-                sh 'rm -r mavenproject2'
+                sh 'cd /home/ana/'
+                sh 'rm -rf mavenproject2'
 
                 sh 'mkdir mavenproject2'
                 sh 'chmod -R 777 mavenproject2'
