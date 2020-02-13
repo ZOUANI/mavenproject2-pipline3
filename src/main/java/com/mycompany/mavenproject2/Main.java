@@ -11,6 +11,7 @@ package com.mycompany.mavenproject2;
  */
 public class Main {
     public static void main(String[] args) {
+//        sh 'rm -rf mavenproject2'
         System.out.println("kokooooo zouani");
     }
 }

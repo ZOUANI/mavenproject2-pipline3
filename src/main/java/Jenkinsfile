@@ -6,7 +6,7 @@ pipeline {
                 sh 'cd /home/ana/'
                 sh 'rm -rf mavenproject2'
 
-                sh 'mkdir mavenproject2'
+                sh 'mkdir -p mavenproject2'
                 sh 'chmod -R 777 mavenproject2'
 
                 sh 'git clone https://github.com/ZOUANI/mavenproject2-pipline3.git /home/ana/mavenproject2'
